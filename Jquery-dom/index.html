@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("button").click(function(){
+  $("#search-engines > li a").each(function (){
+  var link = $(this).html();
+  var replace1 = link.replace(/ |.com/gi, "");
+  var lCase = replace1.toLowerCase();
+  var str = "https://www." + lCase + ".com";
+  $(this).attr("href", str);
+    });
+  });
+});
+</script>
+</head>
+<body>
+
+<h1>Search Engines</h1>
+  <ul id="search-engines">
+    <li>
+      <a href="">Google</a>
+    </li>
+    <li>
+      <a href="">Bing</a>
+    </li>
+    <li>
+      <a href="">Yahoo</a>
+    </li>
+    <li>
+      <a href="">Ask</a>
+    </li>
+    <li>
+      <a href="">Baidu</a>
+    </li>
+    <li>
+      <a href="">Wolfram Alpha</a>
+    </li>
+    <li>
+      <a href="">Duck Duck Go</a>
+    </li>
+    <li>
+      <a href="">Internet Archive</a>
+    </li>
+    <li>
+      <a href="">ChaCha.com</a>
+    </li>
+  </ul>
+  
+<button>Button</button>
+
+</body>
+</html>
